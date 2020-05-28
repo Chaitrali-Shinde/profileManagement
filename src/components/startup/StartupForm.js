@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import StartupPersonalInfo from './startupPersnonalInfo';
+import StartupCompanyInfo from './StartupCompanyInfo';
 
 export class StartupForm extends Component {
 
@@ -47,12 +48,14 @@ export class StartupForm extends Component {
 
     
     render() {
+
+        
         const {step}= this.state;
         const {firstname, lastname, age, email, hightestquali, phnno, userID, domain, DIPP_no, 
             address, city, country, postalCode, startupName,startupDescription, webSiteURL}= this.state;
-
-        const values= {firstname, lastname, age, email, hightestquali, phnno,userID, domain, DIPP_no, 
-            address, city, country, postalCode, startupName,startupDescription, webSiteURL};
+            
+        const values= {firstname, lastname, age, email, hightestquali, phnno, userID, domain, DIPP_no, 
+            address, city, country, postalCode, startupName,startupDescription, webSiteURL}
         
             switch(step){
                 case 1: 
@@ -60,11 +63,18 @@ export class StartupForm extends Component {
                         <StartupPersonalInfo
                         handleChange= {this.handleChange}
                         nextStep= {this.nextStep}
-                        values= {this.values}
+                        values= {values}
                         />
                     )
                 case 2: 
-                return(<h1>Personal Details</h1>)
+                return(
+                    <StartupCompanyInfo
+                    handleChange= {this.handleChange}
+                    nextStep= {this.nextStep}
+                    prevStep= {this.prevStep}
+                    values= {values}
+                    />
+                    )
                 case 3: 
                 return(<h1>Confirm Details</h1>)
                 case 4: 

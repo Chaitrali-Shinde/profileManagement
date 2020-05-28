@@ -1,102 +1,110 @@
 import React from 'react';
-import {Card, Form} from 'react-bootstrap'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton'
+
+
 
 class StartupCompanyInfo extends React.Component{ 
 
-    constructor(props){
-        super(props);
-        this.state={
-            
-        }
-        this.handleChange= this.handleChange.bind(this);
-        this.handleSubmit= this.handleSubmit.bind(this);
-    }
-
-        handleChange(e){
-            const value= e.target.value;
-            const name= e. target.name;
-
-            this.setState({
-                [name]: value
-            })
-
-            return true;
-        }
-
-        handleSubmit(){
-
-        }
+   continue= e=>{
+       e.preventDefault();
+       this.props.nextStep();
+   }
+   back= e=>{
+    e.preventDefault();
+    this.props.prevStep();
+}
             
         
 
     render(){
 
- 
+        const {values, handleChange}= this.props;
+
         return(
-            <div>
-                <Form.Group>
-                  
-                <from onSubmit= {
-                    this.handleSubmit}> 
+        
+                <MuiThemeProvider>
+                  <React.Fragment>
+                      <TextField
+                      hintText= "Enter Company Name"
+                      floatingLabelText= "Company Name"
+                      onChange= {handleChange('startupName')}
+                      defaultValue= {values.startupName}
+                      />
+                       <TextField
+                      hintText= "Enter Startup Description"
+                      floatingLabelText= "Descripyion"
+                      onChange= {handleChange('startupDescription')}
+                      defaultValue= {values.startupDescription}
+                      />
+                       <TextField
+                      hintText= "Enter Website URL"
+                      floatingLabelText= "URL"
+                      onChange= {handleChange('webSiteURL')}
+                      defaultValue= {values.webSiteURL}
 
-                   
-                    <input type= "number"
-                            placeholder= "DIPP NO."
-                            name= "DIPP_no"
-                            onChange= {this.handleChange}
-                    />
+                      />
+                       <TextField
+                      hintText= "Enter Domain"
+                      floatingLabelText= "Domain"
+                      onChange= {handleChange('domain')}
+                      defaultValue= {values.domain}
+
+                      />
+                       <TextField
+                      hintText= "Enter DIPP Number"
+                      floatingLabelText= "DIPP No."
+                      onChange= {handleChange('DIPP_no')}
+                      defaultValue= {values.DIPP_no}
+
+                      />
+                       <TextField
+                      hintText= "Enter Address"
+                      floatingLabelText= "Address"
+                      onChange= {handleChange('address')}
+                      defaultValue= {values.address}
+
+                      />
+                         <TextField
+                      hintText= "Enter City"
+                      floatingLabelText= "city"
+                      onChange= {handleChange('city')}
+                      defaultValue= {values.city}
+
+                      />
+                       <TextField
+                      hintText= "Enter Country"
+                      floatingLabelText= "country"
+                      onChange= {handleChange('country')}
+                      defaultValue= {values.country}
+
+                      />
+                       <TextField
+                      hintText= "Enter Postal Code"
+                      floatingLabelText= "Postal Code"
+                      onChange= {handleChange('postalCode')}
+                      defaultValue= {values.postalCode}
+
+                      />
                      
-                    <input type= "text"
-                            placeholder= "Address"
-                            name= "address"
-                            onChange= {this.handleChange}
-                    />
+                      
+                      <RaisedButton
+                        label="Continue"
+                        primary= {true}
+                        onClick= {this.continue}
+                      />
 
-                    <input type= "text"
-                            placeholder= "City"
-                            name= "city"
-                            onChange= {this.handleChange}
-                    />
-
-                    <input type= "country"
-                            placeholder= "Country"
-                            name= "country"
-                            onChange= {this.handleChange}
-                    />
-
-                    <input type= "number"
-                            placeholder= "Postal Code"
-                            name= "postalCode"
-                            onChange= {this.handleChange}
-                    />
-
-                    <input type= "text"
-                            placeholder= "Startup Name"
-                            name= "startupName"
-                            onChange= {this.handleChange}
-                    />
-
-                    <input type= "text"
-                            placeholder= "Startup Description"
-                            name= "startupDescription"
-                            onChange= {this.handleChange}
-                    />
-
-                    <input type= "url"
-                            placeholder= "Startup Website URL"
-                            name= "websiteURL"
-                            onChange= {this.handleChange}
-                    />
-                    
-
-                    <input type= "submit"
-                            value= "submit"
-                    />
-
-                </from>
-                </Form.Group>
+                    <RaisedButton
+                        label="Back"
+                        primary= {false}
+                        onClick= {this.back}
+                      />
+                  </React.Fragment>
+         
+                </MuiThemeProvider>
                 
-            </div>
+       
         );
 
     }
