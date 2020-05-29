@@ -24,7 +24,7 @@ export class FrontPage extends Component {
                     </Card>
                     <Card> 
                         <Card.Img src= "./assets/mentor.jpeg"/>
-                        <Link to= "startupform">
+                        <Link to= "mentorform">
                         <Button variant="primary" >Mentor</Button>
                         </Link>
                     </Card>
@@ -39,7 +39,7 @@ export class FrontPage extends Component {
                     <Card>
                     <Card.Img src= "./assets/community.jpeg"/>
                         <Link to= "startupform">
-                        <Button variant="primary" >Mentor</Button>
+                        <Button variant="primary" >Community</Button>
                         </Link>
                     </Card>
                 </CardDeck>
