@@ -32,13 +32,13 @@ export class FrontPage extends Component {
                 <CardDeck>
                     <Card>
                     <Card.Img src= "./assets/investor.jpeg"/>
-                        <Link to= "startupform">
+                        <Link to= "investorform">
                         <Button variant="primary" >Investor</Button>
                         </Link>
                     </Card>
                     <Card>
                     <Card.Img src= "./assets/community.jpeg"/>
-                        <Link to= "startupform">
+                        <Link to= "communityform">
                         <Button variant="primary" >Community</Button>
                         </Link>
                     </Card>
