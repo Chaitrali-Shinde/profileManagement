@@ -16,20 +16,32 @@ export class FrontPage extends Component {
             <div>
                 <CardDeck>
                     <Card>
-                        <Card.Img src= "logo192.png"/>
-                        <Card.Title>Startup</Card.Title>
+                        <Card.Img src= "./assets/startup.jpeg"/>
                         <Link to= "startupform">
                         <Button variant="primary" >Startup</Button>
                         </Link>
                        
                     </Card>
-                    <Card>HI</Card>
+                    <Card> 
+                        <Card.Img src= "./assets/mentor.jpeg"/>
+                        <Link to= "startupform">
+                        <Button variant="primary" >Mentor</Button>
+                        </Link>
+                    </Card>
                 </CardDeck>
                 <CardDeck>
                     <Card>
-                        hi
+                    <Card.Img src= "./assets/investor.jpeg"/>
+                        <Link to= "startupform">
+                        <Button variant="primary" >Investor</Button>
+                        </Link>
                     </Card>
-                    <Card>HI</Card>
+                    <Card>
+                    <Card.Img src= "./assets/community.jpeg"/>
+                        <Link to= "startupform">
+                        <Button variant="primary" >Mentor</Button>
+                        </Link>
+                    </Card>
                 </CardDeck>
                  
             </div>
