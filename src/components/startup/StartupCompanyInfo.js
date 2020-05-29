@@ -26,60 +26,65 @@ class StartupCompanyInfo extends React.Component{
         
                 <MuiThemeProvider>
                   <React.Fragment>
+                  <h1 style= {{color: "white",
+                                 backgroundColor: "#77a6f7"
+                    }}>Company Details</h1>
+                  <br/>
                       <TextField
                       hintText= "Enter Company Name"
                       floatingLabelText= "Company Name"
                       onChange= {handleChange('startupName')}
                       defaultValue= {values.startupName}
                       />
+                         <br/>
                        <TextField
                       hintText= "Enter Startup Description"
                       floatingLabelText= "Descripyion"
                       onChange= {handleChange('startupDescription')}
                       defaultValue= {values.startupDescription}
                       />
+                         <br/>
                        <TextField
                       hintText= "Enter Website URL"
                       floatingLabelText= "URL"
                       onChange= {handleChange('webSiteURL')}
                       defaultValue= {values.webSiteURL}
-
-                      />
+                      />   <br/>
                        <TextField
                       hintText= "Enter Domain"
                       floatingLabelText= "Domain"
                       onChange= {handleChange('domain')}
                       defaultValue= {values.domain}
 
-                      />
+                      />   <br/>
                        <TextField
                       hintText= "Enter DIPP Number"
                       floatingLabelText= "DIPP No."
                       onChange= {handleChange('DIPP_no')}
                       defaultValue= {values.DIPP_no}
 
-                      />
+                      />   <br/>
                        <TextField
                       hintText= "Enter Address"
                       floatingLabelText= "Address"
                       onChange= {handleChange('address')}
                       defaultValue= {values.address}
 
-                      />
+                      />   <br/>
                          <TextField
                       hintText= "Enter City"
                       floatingLabelText= "city"
                       onChange= {handleChange('city')}
                       defaultValue= {values.city}
 
-                      />
+                      />   <br/>
                        <TextField
                       hintText= "Enter Country"
                       floatingLabelText= "country"
                       onChange= {handleChange('country')}
                       defaultValue= {values.country}
 
-                      />
+                      />   <br/>
                        <TextField
                       hintText= "Enter Postal Code"
                       floatingLabelText= "Postal Code"
@@ -87,7 +92,7 @@ class StartupCompanyInfo extends React.Component{
                       defaultValue= {values.postalCode}
 
                       />
-                     
+                     <br/>
                       
                       <RaisedButton
                         label="Continue"

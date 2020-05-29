@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import StartupPersonalInfo from './startupPersnonalInfo';
 import StartupCompanyInfo from './StartupCompanyInfo';
+import StartupConfirm from './StartupConfirm';
+import StartupSuccess from './StartupSuccess';
+
+
 
 export class StartupForm extends Component {
 
@@ -76,9 +80,17 @@ export class StartupForm extends Component {
                     />
                     )
                 case 3: 
-                return(<h1>Confirm Details</h1>)
+                return(
+                    <StartupConfirm
+                    nextStep= {this.nextStep}
+                    prevStep= {this.prevStep}
+                    values= {values}
+                    />
+                )
                 case 4: 
-                return(<h1>Success</h1>)
+                return(
+                    <StartupSuccess/>
+                )
             }
 
     }
