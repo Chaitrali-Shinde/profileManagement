@@ -30,15 +30,15 @@ class StartupPersonalInfo extends React.Component{
                       <TextField
                       hintText= "Enter Firstname"
                       floatingLabelText= "Firstname"
-                      onChange= {handleChange('firstname')}
-                      defaultValue= {values.firstname}
+                      onChange= {handleChange('firstName')}
+                      defaultValue= {values.firstName}
                       />
                       <br/>
                        <TextField
                       hintText= "Enter Lastname"
                       floatingLabelText= "Lastname"
-                      onChange= {handleChange('lastname')}
-                      defaultValue= {values.lastname}
+                      onChange= {handleChange('lastName')}
+                      defaultValue= {values.lastName}
                       />
                       <br/>
                        <TextField
@@ -58,15 +58,15 @@ class StartupPersonalInfo extends React.Component{
                        <TextField
                       hintText= "Enter Highest Qualification"
                       floatingLabelText= "Highest Qualification"
-                      onChange= {handleChange('hightestquali')}
-                      defaultValue= {values.hightestquali}
+                      onChange= {handleChange('qualification')}
+                      defaultValue= {values.qualification}
                       />
                       <br/>
                        <TextField
                       hintText= "Enter Phone Number"
                       floatingLabelText= "Phone No."
-                      onChange= {handleChange('phnno')}
-                      defaultValue= {values.phnno}
+                      onChange= {handleChange('phone_no')}
+                      defaultValue= {values.phone_no}
                       />
                      <br/>
                       

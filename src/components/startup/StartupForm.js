@@ -10,22 +10,23 @@ export class StartupForm extends Component {
 
         state={
             step: 1,
-            firstname: "",
-            lastname: "",
+            firstName: "",
+            lastName: "",
             age: "",
             email: "",
-            hightestquali: "",
-            phnno: "",
+            qualification: "",
+            phone_no: "",
             userID: "",
             domain: "",
             DIPP_no: "",
-            address: "",
+            Address: "",
 			city: "",
 			country: "",
 			postalCode: "",
 			startupName: "",
 			startupDescription: "",
-			webSiteURL: ""
+            websiteURL: "",
+            profession: ""
         }
 
         //proceed to next step
@@ -55,11 +56,11 @@ export class StartupForm extends Component {
 
         
         const {step}= this.state;
-        const {firstname, lastname, age, email, hightestquali, phnno, userID, domain, DIPP_no, 
-            address, city, country, postalCode, startupName,startupDescription, webSiteURL}= this.state;
+        const {firstName, lastName, age, email, qualification, phone_no, userID, domain, DIPP_no, 
+            Address, city, country, postalCode, startupName,startupDescription, websiteURL, profession}= this.state;
             
-        const values= {firstname, lastname, age, email, hightestquali, phnno, userID, domain, DIPP_no, 
-            address, city, country, postalCode, startupName,startupDescription, webSiteURL}
+        const values= {firstName, lastName, age, email, qualification, phone_no, userID, domain, DIPP_no, 
+            Address, city, country, postalCode, startupName,startupDescription, websiteURL, profession}
         
             switch(step){
                 case 1: 

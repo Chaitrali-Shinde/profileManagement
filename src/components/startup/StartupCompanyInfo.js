@@ -29,6 +29,13 @@ class StartupCompanyInfo extends React.Component{
                   <h1 style= {{color: "white",
                                  backgroundColor: "#77a6f7"
                     }}>Company Details</h1>
+                     <br/>
+                      <TextField
+                      hintText= "Enter your profession"
+                      floatingLabelText= "profession"
+                      onChange= {handleChange('profession')}
+                      defaultValue= {values.profession}
+                      />
                   <br/>
                       <TextField
                       hintText= "Enter Company Name"
@@ -47,8 +54,8 @@ class StartupCompanyInfo extends React.Component{
                        <TextField
                       hintText= "Enter Website URL"
                       floatingLabelText= "URL"
-                      onChange= {handleChange('webSiteURL')}
-                      defaultValue= {values.webSiteURL}
+                      onChange= {handleChange('websiteURL')}
+                      defaultValue= {values.websiteURL}
                       />   <br/>
                        <TextField
                       hintText= "Enter Domain"
@@ -67,8 +74,8 @@ class StartupCompanyInfo extends React.Component{
                        <TextField
                       hintText= "Enter Address"
                       floatingLabelText= "Address"
-                      onChange= {handleChange('address')}
-                      defaultValue= {values.address}
+                      onChange= {handleChange('Address')}
+                      defaultValue= {values.Address}
 
                       />   <br/>
                          <TextField
