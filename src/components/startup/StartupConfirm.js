@@ -32,14 +32,15 @@ class StartupConfirm extends React.Component{
         }
 
         console.log(data);
-/*
-        axios.post('localhost:8081/startup/add', {data})
+
+        axios.put('localhost:8081/startup/profile/add', {data})
         .then(function (response) {
 
             console.log(response.data);
        this.props.nextStep();
 
-   })*/
+   })
+   //.catch((error)=> console.log("error"))
 }
    
 
